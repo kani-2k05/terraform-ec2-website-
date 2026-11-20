@@ -29,7 +29,7 @@ resource "aws_security_group" "web_sg" {
 }
 
 resource "aws_instance" "web" {
-  ami                    = "ami-0do3cb826412c6b0f"
+  ami                    = "ami-0d87d059b6138553e"
   instance_type          = "t3.micro"
   vpc_security_group_ids = [aws_security_group.web_sg.id]
   user_data              = file("install.sh")
